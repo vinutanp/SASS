@@ -1,0 +1,36 @@
+$color-primary:orange;
+$color-secondary:grey;
+$color-tertiary:red;
+
+$font-lg:40px;
+$font-md:30px;
+$font-sm:20px;
+
+.nav{
+    background-color: $color-primary;
+    ul li{
+        list-style: none;
+
+    }
+    a{
+        text-decoration: none;
+        font-size: $font-sm;
+
+        &:hover{
+            color: $color-tertiary;
+        }
+    }
+}
+
+@mixin headingStyle($fontsize){
+    font-size:$fontsize;
+    color: $color-secondary;
+    text-align: center;
+}
+.banner h1{
+    @include headingStyle($font-md);
+}
+
+.footer h3{
+   @include headingStyle($font-md);
+}
